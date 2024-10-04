@@ -35,16 +35,36 @@
             color: yellow;
         }
 
+        @media screen and (max-width: 480px){
+            .responsive{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #txtn1, #txtn2{
+                width: 30vw;
+            }
+
+            #calc{
+                margin-top: 20px;
+                width: 71vw;
+            }
+
+        }
+
     </style>
 </head>
 <body>
     <h1>PROJETO CALCULADORA</h1>
-    <section>
+    <section class="responsive">
         <h2>Somando valores</h2>
-    <input type="number" name="txtn1" id="txtn1"> +
-    <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" id="calc">
-    <div id="res">Resultado:</div>
+        <div class="userNumbers">
+          <input type="number" name="txtn1" id="txtn1"> +
+          <input type="number" name="txtn2" id="txtn2">
+        </div>
+        <input type="button" value="Somar" id="calc">
+        <div id="res">Resultado:</div>
     </section>
 
     <script>
